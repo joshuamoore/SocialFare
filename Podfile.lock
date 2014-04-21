@@ -1,0 +1,16 @@
+PODS:
+  - CocoaSecurity (1.2.3)
+  - Facebook-iOS-SDK (3.13.1)
+  - SecureNSUserDefaults (1.0.0):
+    - CocoaSecurity (~> 1.2.1)
+
+DEPENDENCIES:
+  - Facebook-iOS-SDK (~> 3.13)
+  - SecureNSUserDefaults (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  CocoaSecurity: 9c82f530dc5b0516b04cc2ed4c2f5cd90f25352d
+  Facebook-iOS-SDK: 0d121e16437981fabff9379e07bf646bd5ab245c
+  SecureNSUserDefaults: 4bce99f87ef50cca20146dfe50a34288eb3ff24f
+
+COCOAPODS: 0.32.1
