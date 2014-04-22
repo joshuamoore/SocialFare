@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		86EA9AB932EC4688B3E598D9 /* libPods-SocialFare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B384F3B8E424F36BA04B8F3 /* libPods-SocialFare.a */; };
 		D043E99519054EB500D022D2 /* SFMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D043E99419054EB500D022D2 /* SFMenuVC.m */; };
+		D043E99D1905DC8700D022D2 /* SFFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D043E99C1905DC8700D022D2 /* SFFriendsCell.m */; };
+		D043E9A01905DCFD00D022D2 /* SFFriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D043E99F1905DCFD00D022D2 /* SFFriendsVC.m */; };
 		D0F8EDA51904946C007F617B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F8EDA41904946C007F617B /* Foundation.framework */; };
 		D0F8EDA71904946D007F617B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F8EDA61904946D007F617B /* CoreGraphics.framework */; };
 		D0F8EDA91904946D007F617B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F8EDA81904946D007F617B /* UIKit.framework */; };
@@ -42,6 +44,11 @@
 		6B384F3B8E424F36BA04B8F3 /* libPods-SocialFare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialFare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D043E99319054EB500D022D2 /* SFMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMenuVC.h; sourceTree = "<group>"; };
 		D043E99419054EB500D022D2 /* SFMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMenuVC.m; sourceTree = "<group>"; };
+		D043E99B1905DC8700D022D2 /* SFFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFFriendsCell.h; sourceTree = "<group>"; };
+		D043E99C1905DC8700D022D2 /* SFFriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFFriendsCell.m; sourceTree = "<group>"; };
+		D043E99E1905DCFD00D022D2 /* SFFriendsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFFriendsVC.h; sourceTree = "<group>"; };
+		D043E99F1905DCFD00D022D2 /* SFFriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFFriendsVC.m; sourceTree = "<group>"; };
+		D043E9A11905E14C00D022D2 /* AFNetworkingIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkingIncludes.h; sourceTree = "<group>"; };
 		D0F8EDA11904946C007F617B /* SocialFare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialFare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8EDA41904946C007F617B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0F8EDA61904946D007F617B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +108,25 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		D043E9961905DC2600D022D2 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				D043E99A1905DC7600D022D2 /* cells */,
+				D043E99E1905DCFD00D022D2 /* SFFriendsVC.h */,
+				D043E99F1905DCFD00D022D2 /* SFFriendsVC.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		D043E99A1905DC7600D022D2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D043E99B1905DC8700D022D2 /* SFFriendsCell.h */,
+				D043E99C1905DC8700D022D2 /* SFFriendsCell.m */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		D0F8ED981904946C007F617B = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +162,7 @@
 		D0F8EDAA1904946D007F617B /* SocialFare */ = {
 			isa = PBXGroup;
 			children = (
+				D043E9961905DC2600D022D2 /* Friends */,
 				D043E99219054E9A00D022D2 /* Menu */,
 				D0F8EDDD19049D14007F617B /* Globals */,
 				D0F8EDDC19049B1F007F617B /* Landing */,
@@ -190,6 +217,7 @@
 		D0F8EDDD19049D14007F617B /* Globals */ = {
 			isa = PBXGroup;
 			children = (
+				D043E9A11905E14C00D022D2 /* AFNetworkingIncludes.h */,
 				D0F8EDE219049DA4007F617B /* SFConstants.h */,
 				D0F8EDE619049E7D007F617B /* SFFunctions.h */,
 				D0F8EDE719049E7D007F617B /* SFFunctions.m */,
@@ -337,6 +365,8 @@
 				D0F8EDB11904946D007F617B /* main.m in Sources */,
 				D0F8EDBE1904946D007F617B /* SFLandingVC.m in Sources */,
 				D043E99519054EB500D022D2 /* SFMenuVC.m in Sources */,
+				D043E9A01905DCFD00D022D2 /* SFFriendsVC.m in Sources */,
+				D043E99D1905DC8700D022D2 /* SFFriendsCell.m in Sources */,
 				D0F8EDE819049E7D007F617B /* SFFunctions.m in Sources */,
 				D0F8EDB51904946D007F617B /* SFAppDelegate.m in Sources */,
 			);

@@ -15,8 +15,14 @@
 
 #define kLandingIdentifier @"landing"
 #define kMenuIdentifier @"menu"
+#define kFriendsIdentifier @"friends"
+
+#define kFriendsTVCell @"friendsCell"
 
 #define kFriends @"friends"
+#define kFriendPicture @"picture"
+#define kFriendData @"data"
+#define kFriendUrl @"url"
 
 #define kEncryptionKey @"87be0ca11907430fa92bf50788c537d6b95f5e8b58afb5b47fbd8fdec07ee0ecdffb8d4b829d15c7d39ed0fd44f5521b5a29cede33f8871588bddd478b422503ad5be678c7aba6f5b56c1999e30e4825b2c2230b2c1f6d78188b70bf82c336b9e53acd032ce1b91b8cf863efab3bf750abe9d87115c10392f5cc4154feee1fe83a25ffaea53fa83e25fee386cb1f84bbe94cb72f15bfa9ca04bfd755268365b85c48e1941d75aed090189bff525156121288a9133960c292cd70f563a0e867d4392372eb6da08b2fcecdbfd5104a919112c41c938e2904c52ee425c42bdfa3a076b98f007de8c5c3d0164d282776a7bc2a708c0315a9b5341a6154c0f43afe85"
 

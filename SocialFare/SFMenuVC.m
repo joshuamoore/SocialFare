@@ -7,6 +7,7 @@
 //
 
 #import "SFMenuVC.h"
+#import "SFFriendsVC.h"
 
 @interface SFMenuVC ()
 
@@ -24,6 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)viewFriendsTouched:(id)sender {
+    SFFriendsVC *friendsVC = [self.storyboard instantiateViewControllerWithIdentifier:kFriendsIdentifier];
+    [self.navigationController pushViewController:friendsVC animated:YES];
+}
 
 @end

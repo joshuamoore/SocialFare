@@ -17,4 +17,5 @@
     #import "SFConstants.h"
     #import "SFFunctions.h"
     #import <SecureNSUserDefaults/NSUserDefaults+SecureAdditions.h>
+    #import "AFNetworkingIncludes.H"
 #endif

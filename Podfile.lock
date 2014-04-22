@@ -1,14 +1,41 @@
 PODS:
+  - AFNetworking (2.0.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.0.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.0.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.0.0)
+  - AFNetworking/Security (2.0.0)
+  - AFNetworking/Serialization (2.0.0)
+  - AFNetworking/UIKit (2.0.0):
+    - AFNetworking/NSURLConnection
   - CocoaSecurity (1.2.3)
   - Facebook-iOS-SDK (3.13.1)
   - SecureNSUserDefaults (1.0.0):
     - CocoaSecurity (~> 1.2.1)
 
 DEPENDENCIES:
+  - AFNetworking (from `https://github.com/joshuamoore/AFNetworking.git`, tag `2.0.1`)
   - Facebook-iOS-SDK (~> 3.13)
   - SecureNSUserDefaults (~> 1.0.0)
 
+EXTERNAL SOURCES:
+  AFNetworking:
+    :git: https://github.com/joshuamoore/AFNetworking.git
+    :tag: 2.0.1
+
 SPEC CHECKSUMS:
+  AFNetworking: 4131c2f81bd5762c9db2993e9b854d21ed33b187
   CocoaSecurity: 9c82f530dc5b0516b04cc2ed4c2f5cd90f25352d
   Facebook-iOS-SDK: 0d121e16437981fabff9379e07bf646bd5ab245c
   SecureNSUserDefaults: 4bce99f87ef50cca20146dfe50a34288eb3ff24f

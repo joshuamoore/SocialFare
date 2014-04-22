@@ -13,16 +13,22 @@
 @implementation SFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self initializeFacebook];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[UINavigationBar class]
                                                                               toolbarClass:[UIToolbar class]];
     
     
+    [[NSUserDefaults standardUserDefaults] setSecret:kEncryptionKey];
+    
+    [self initializeFacebook];
+    
     UIStoryboard *storyboard = [self getStoryboard];
     
     SFLandingVC *landingVC = (SFLandingVC *)[storyboard instantiateViewControllerWithIdentifier:kLandingIdentifier];
     [self.navigationController pushViewController:landingVC animated:YES];
+    
+    self.window.rootViewController = self.navigationController;
     
     return YES;
 }

@@ -1,5 +1,5 @@
 //
-//  SFMenuVC.h
+//  SFFriendsVC.h
 //  SocialFare
 //
 //  Created by Josh Moore on 4/21/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SFMenuVC : UIViewController
-
-- (IBAction)viewFriendsTouched:(id)sender;
+@interface SFFriendsVC : UITableViewController
 
 @end
