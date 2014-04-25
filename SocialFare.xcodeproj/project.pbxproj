@@ -11,6 +11,15 @@
 		D043E99519054EB500D022D2 /* SFMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D043E99419054EB500D022D2 /* SFMenuVC.m */; };
 		D043E99D1905DC8700D022D2 /* SFFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D043E99C1905DC8700D022D2 /* SFFriendsCell.m */; };
 		D043E9A01905DCFD00D022D2 /* SFFriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D043E99F1905DCFD00D022D2 /* SFFriendsVC.m */; };
+		D08A985119088F7300710936 /* SocialFare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D08A984F19088F7300710936 /* SocialFare.xcdatamodeld */; };
+		D08A98791908980E00710936 /* SFCheckinsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98781908980E00710936 /* SFCheckinsVC.m */; };
+		D08A98BC1909334400710936 /* _Checkin.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98B11909334400710936 /* _Checkin.m */; };
+		D08A98BD1909334400710936 /* _Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98B31909334400710936 /* _Friend.m */; };
+		D08A98BE1909334400710936 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98B51909334400710936 /* _User.m */; };
+		D08A98BF1909334400710936 /* Checkin.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98B71909334400710936 /* Checkin.m */; };
+		D08A98C01909334400710936 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98B91909334400710936 /* Friend.m */; };
+		D08A98C11909334400710936 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A98BB1909334400710936 /* User.m */; };
+		D0AC6CD91907EDB9000E7503 /* SFCoreDataFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AC6CD81907EDB9000E7503 /* SFCoreDataFunctions.m */; };
 		D0F8EDA51904946C007F617B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F8EDA41904946C007F617B /* Foundation.framework */; };
 		D0F8EDA71904946D007F617B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F8EDA61904946D007F617B /* CoreGraphics.framework */; };
 		D0F8EDA91904946D007F617B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F8EDA81904946D007F617B /* UIKit.framework */; };
@@ -49,6 +58,23 @@
 		D043E99E1905DCFD00D022D2 /* SFFriendsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFFriendsVC.h; sourceTree = "<group>"; };
 		D043E99F1905DCFD00D022D2 /* SFFriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFFriendsVC.m; sourceTree = "<group>"; };
 		D043E9A11905E14C00D022D2 /* AFNetworkingIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkingIncludes.h; sourceTree = "<group>"; };
+		D08A985019088F7300710936 /* SocialFare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialFare.xcdatamodel; sourceTree = "<group>"; };
+		D08A98771908980E00710936 /* SFCheckinsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCheckinsVC.h; sourceTree = "<group>"; };
+		D08A98781908980E00710936 /* SFCheckinsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCheckinsVC.m; sourceTree = "<group>"; };
+		D08A98B01909334400710936 /* _Checkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Checkin.h; path = DataModel/_Checkin.h; sourceTree = "<group>"; };
+		D08A98B11909334400710936 /* _Checkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Checkin.m; path = DataModel/_Checkin.m; sourceTree = "<group>"; };
+		D08A98B21909334400710936 /* _Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Friend.h; path = DataModel/_Friend.h; sourceTree = "<group>"; };
+		D08A98B31909334400710936 /* _Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Friend.m; path = DataModel/_Friend.m; sourceTree = "<group>"; };
+		D08A98B41909334400710936 /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = DataModel/_User.h; sourceTree = "<group>"; };
+		D08A98B51909334400710936 /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = DataModel/_User.m; sourceTree = "<group>"; };
+		D08A98B61909334400710936 /* Checkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checkin.h; path = DataModel/Checkin.h; sourceTree = "<group>"; };
+		D08A98B71909334400710936 /* Checkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checkin.m; path = DataModel/Checkin.m; sourceTree = "<group>"; };
+		D08A98B81909334400710936 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = DataModel/Friend.h; sourceTree = "<group>"; };
+		D08A98B91909334400710936 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = DataModel/Friend.m; sourceTree = "<group>"; };
+		D08A98BA1909334400710936 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = DataModel/User.h; sourceTree = "<group>"; };
+		D08A98BB1909334400710936 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = DataModel/User.m; sourceTree = "<group>"; };
+		D0AC6CD71907EDB9000E7503 /* SFCoreDataFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCoreDataFunctions.h; sourceTree = "<group>"; };
+		D0AC6CD81907EDB9000E7503 /* SFCoreDataFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCoreDataFunctions.m; sourceTree = "<group>"; };
 		D0F8EDA11904946C007F617B /* SocialFare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialFare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F8EDA41904946C007F617B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0F8EDA61904946D007F617B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +153,43 @@
 			name = cells;
 			sourceTree = "<group>";
 		};
+		D08A9876190897FC00710936 /* Checkins */ = {
+			isa = PBXGroup;
+			children = (
+				D08A98771908980E00710936 /* SFCheckinsVC.h */,
+				D08A98781908980E00710936 /* SFCheckinsVC.m */,
+			);
+			name = Checkins;
+			sourceTree = "<group>";
+		};
+		D0AC6CC01907E159000E7503 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D0AC6CC41907EC4B000E7503 /* Models */,
+				D08A984F19088F7300710936 /* SocialFare.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		D0AC6CC41907EC4B000E7503 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D08A98B01909334400710936 /* _Checkin.h */,
+				D08A98B11909334400710936 /* _Checkin.m */,
+				D08A98B21909334400710936 /* _Friend.h */,
+				D08A98B31909334400710936 /* _Friend.m */,
+				D08A98B41909334400710936 /* _User.h */,
+				D08A98B51909334400710936 /* _User.m */,
+				D08A98B61909334400710936 /* Checkin.h */,
+				D08A98B71909334400710936 /* Checkin.m */,
+				D08A98B81909334400710936 /* Friend.h */,
+				D08A98B91909334400710936 /* Friend.m */,
+				D08A98BA1909334400710936 /* User.h */,
+				D08A98BB1909334400710936 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		D0F8ED981904946C007F617B = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +225,8 @@
 		D0F8EDAA1904946D007F617B /* SocialFare */ = {
 			isa = PBXGroup;
 			children = (
+				D08A9876190897FC00710936 /* Checkins */,
+				D0AC6CC01907E159000E7503 /* DataModel */,
 				D043E9961905DC2600D022D2 /* Friends */,
 				D043E99219054E9A00D022D2 /* Menu */,
 				D0F8EDDD19049D14007F617B /* Globals */,
@@ -221,6 +286,8 @@
 				D0F8EDE219049DA4007F617B /* SFConstants.h */,
 				D0F8EDE619049E7D007F617B /* SFFunctions.h */,
 				D0F8EDE719049E7D007F617B /* SFFunctions.m */,
+				D0AC6CD71907EDB9000E7503 /* SFCoreDataFunctions.h */,
+				D0AC6CD81907EDB9000E7503 /* SFCoreDataFunctions.m */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -362,13 +429,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08A98C11909334400710936 /* User.m in Sources */,
 				D0F8EDB11904946D007F617B /* main.m in Sources */,
+				D08A98791908980E00710936 /* SFCheckinsVC.m in Sources */,
 				D0F8EDBE1904946D007F617B /* SFLandingVC.m in Sources */,
 				D043E99519054EB500D022D2 /* SFMenuVC.m in Sources */,
+				D08A98BC1909334400710936 /* _Checkin.m in Sources */,
 				D043E9A01905DCFD00D022D2 /* SFFriendsVC.m in Sources */,
+				D08A98C01909334400710936 /* Friend.m in Sources */,
+				D0AC6CD91907EDB9000E7503 /* SFCoreDataFunctions.m in Sources */,
+				D08A98BD1909334400710936 /* _Friend.m in Sources */,
 				D043E99D1905DC8700D022D2 /* SFFriendsCell.m in Sources */,
+				D08A985119088F7300710936 /* SocialFare.xcdatamodeld in Sources */,
 				D0F8EDE819049E7D007F617B /* SFFunctions.m in Sources */,
+				D08A98BE1909334400710936 /* _User.m in Sources */,
 				D0F8EDB51904946D007F617B /* SFAppDelegate.m in Sources */,
+				D08A98BF1909334400710936 /* Checkin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +679,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D08A984F19088F7300710936 /* SocialFare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D08A985019088F7300710936 /* SocialFare.xcdatamodel */,
+			);
+			currentVersion = D08A985019088F7300710936 /* SocialFare.xcdatamodel */;
+			name = SocialFare.xcdatamodeld;
+			path = DataModel/SocialFare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0F8ED991904946C007F617B /* Project object */;
 }

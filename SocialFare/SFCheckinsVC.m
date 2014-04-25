@@ -1,23 +1,23 @@
 //
-//  SFFriendsVC.m
+//  SFCheckinsVC.m
 //  SocialFare
 //
-//  Created by Josh Moore on 4/21/14.
+//  Created by Josh Moore on 4/23/14.
 //  Copyright (c) 2014 SocialFare. All rights reserved.
 //
 
-#import "Friend.h"
+#import "DataModel/Checkin.h"
 
-#import "SFFriendsVC.h"
+#import "SFCheckinsVC.h"
 #import "SFFriendsCell.h"
 
-@interface SFFriendsVC () {
-    NSArray *friends;
+@interface SFCheckinsVC () {
+    NSArray *checkins;
 }
 
 @end
 
-@implementation SFFriendsVC
+@implementation SFCheckinsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +26,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self loadFriends];
+    [self loadCheckins];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,12 +38,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [friends count];
+    return [checkins count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = kFriendsTVCell;
+    static NSString *CellIdentifier = @"Cell";
     
     SFFriendsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -51,12 +50,14 @@
         cell = [[SFFriendsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    Friend *friend = (Friend *)friends[indexPath.row];
+    Checkin *checkin = (Checkin *)checkins[indexPath.row];
+    Friend *friend = checkin.friend;
     
-    [cell.imageView setImageWithURL:[NSURL URLWithString:friend.picture]
-                          placeholderImage:[UIImage imageNamed:@"no_avatar"]];
+//    [cell.imageView setImageWithURL:[NSURL URLWithString:checkins.picture]
+//                   placeholderImage:[UIImage imageNamed:@"no_avatar"]];
     
-    cell.name.text = friend.name;
+    cell.textLabel.text = checkin.name;
+    cell.detailTextLabel.text = friend.name;
     
     return cell;
 }
@@ -112,16 +113,17 @@
 
 #pragma mark - data fetching
 
-- (void)loadFriends {
-//    [SVProgressHUD showWithStatus:@"Loading..."
-//                         maskType:SVProgressHUDMaskTypeBlack];
+- (void)loadCheckins {
+    //    [SVProgressHUD showWithStatus:@"Loading..."
+    //                         maskType:SVProgressHUDMaskTypeBlack];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         NSPredicate *userFilter = [NSPredicate predicateWithFormat:@"user_id = %@", [SFFunctions userFacebookID]];
-        friends = [Friend MR_findAllSortedBy:@"name" ascending:YES withPredicate:userFilter];
+        checkins = [Checkin MR_findAllSortedBy:@"name" ascending:YES withPredicate:userFilter];
+        NSLog(@"checkin count: %lu", (unsigned long)[checkins count]);
         [self.tableView reloadData];
         
-//        [SVProgressHUD dismiss];
+        //        [SVProgressHUD dismiss];
     });
 }
 

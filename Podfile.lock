@@ -21,12 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
   - CocoaSecurity (1.2.3)
   - Facebook-iOS-SDK (3.13.1)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.2)
   - SecureNSUserDefaults (1.0.0):
     - CocoaSecurity (~> 1.2.1)
 
 DEPENDENCIES:
   - AFNetworking (from `https://github.com/joshuamoore/AFNetworking.git`, tag `2.0.1`)
   - Facebook-iOS-SDK (~> 3.13)
+  - MagicalRecord (~> 2.2)
   - SecureNSUserDefaults (~> 1.0.0)
 
 EXTERNAL SOURCES:
@@ -38,6 +42,7 @@ SPEC CHECKSUMS:
   AFNetworking: 4131c2f81bd5762c9db2993e9b854d21ed33b187
   CocoaSecurity: 9c82f530dc5b0516b04cc2ed4c2f5cd90f25352d
   Facebook-iOS-SDK: 0d121e16437981fabff9379e07bf646bd5ab245c
+  MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
   SecureNSUserDefaults: 4bce99f87ef50cca20146dfe50a34288eb3ff24f
 
 COCOAPODS: 0.32.1

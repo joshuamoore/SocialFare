@@ -9,6 +9,7 @@
 #import "SFFunctions.h"
 #import "SFLandingVC.h"
 #import "SFAppDelegate.h"
+#import "SFCoreDataFunctions.h"
 
 @implementation SFFunctions
 
@@ -20,28 +21,17 @@
     [appDelegate.session closeAndClearTokenInformation];
 }
 
-//+ (User *)retrieveUserData {
-//    if ([self userAuthToken]) {
-//        User *user = [User MR_findFirstByAttribute:@"authenticationToken"
-//                                         withValue:[self userAuthToken]];
-//        
-//        return user;
-//    } else {
-//        [OUTFunctions clearUserDefaults];
-//        
-//        UINavigationController *navigationController = [[[UIApplication sharedApplication] keyWindow] rootViewController].navigationController;
-//        [navigationController popToRootViewControllerAnimated:YES];
-//        
-//        return nil;
-//    }
-//}
-//
-//+ (NSNumber *)userID {
-//    User *user = [self retrieveUserData];
-//    
-//    return user.id;
-//}
-//
++ (User *)retrieveUserData {
+    User *user = [User MR_findFirstByAttribute:@"facebook_id"
+                                     withValue:[self userFacebookID]];
+    
+    return user;
+}
+
++ (NSString *)userFacebookID {
+    return [[NSUserDefaults standardUserDefaults] secretStringForKey:kUserFacebookID];
+}
+
 //+ (NSString *)userAuthToken {
 //    return [[NSUserDefaults standardUserDefaults] secretObjectForKey:kAuthToken];
 //}
@@ -67,15 +57,19 @@
 //}
 
 + (void)getFriends {
-    [[FBRequest requestForGraphPath:@"/me/friends?fields=name,first_name,last_name,picture,id,address,birthday"] startWithCompletionHandler:
+    [[FBRequest requestForGraphPath:@"/me/friends?fields=name,first_name,last_name,picture,id,address,birthday&limit=100&format=json"] startWithCompletionHandler:
      ^(FBRequestConnection *connection,
        NSDictionary<FBGraphObject> *friends,
        NSError *error) {
          if (!error) {
              NSArray *data = [friends objectForKey:@"data"];
-             [[NSUserDefaults standardUserDefaults] setSecretObject:data forKey:kFriends];
-             [[NSUserDefaults standardUserDefaults] synchronize];
+             
+             for (int i = 0; i < [data count]; i++) {
+                 [SFCoreDataFunctions createOrUpdateFriend:data[i]];
+             }
          } else {
+             [SFFunctions alertView:kApplicationName
+                        withMessage:error.localizedDescription];
              NSLog(@"ERROR: %@", error);
          }
      }];
@@ -83,6 +77,26 @@
 
 + (NSArray *)userFriends {
     return [[NSUserDefaults standardUserDefaults] secretObjectForKey:kFriends];
+}
+
++ (void)getFriendCheckins {
+    [[FBRequest requestForGraphPath:@"me/friends?fields=checkins.fields(coordinates,created_time,id,place,message,tags.fields(pic),from)&limit=300&format=json"] startWithCompletionHandler:
+     ^(FBRequestConnection *connection,
+       NSDictionary<FBGraphObject> *checkins,
+       NSError *error) {
+         if (!error) {
+             NSArray *data = [checkins objectForKey:@"data"];
+//             NSLog(@"checkin: %@", [data firstObject]);
+             
+             for (int i = 0; i < [data count]; i++) {
+                 [SFCoreDataFunctions createOrUpdateCheckin:data[i]];
+             }
+         } else {
+             [SFFunctions alertView:kApplicationName
+                        withMessage:error.localizedDescription];
+             NSLog(@"ERROR: %@", error);
+         }
+     }];
 }
 
 +(NSMutableDictionary *)recurseDictionaryForNull:(NSMutableDictionary *)dictionary {

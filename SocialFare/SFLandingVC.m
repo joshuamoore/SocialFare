@@ -24,7 +24,8 @@
     loginView.delegate = self;
     loginView.readPermissions = @[
                                 @"user_checkins",
-                                @"user_friends"
+                                @"user_friends",
+                                @"friends_checkins"
                                 ];
     [loginView sizeToFit];
     
@@ -96,7 +97,7 @@
 }
 
 -(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-//    NSLog(@"user: %@", user);
+    [self collectAndSaveDataForUser:(NSDictionary *)user];
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
@@ -115,6 +116,36 @@
 - (void)logOut {
     // on log out we reset the main view controller
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)collectAndSaveDataForUser:(NSDictionary *)user {
+    NSMutableDictionary *collectedUserInfo = [[NSMutableDictionary alloc] init];
+//    NSLog(@"user: %@", user);
+    
+    if (user[kUserFirstName]) {
+        [collectedUserInfo setObject:user[kUserFirstName] forKey:kUserFirstName];
+    }
+    
+    if (user[kUserGender]) {
+        [collectedUserInfo setObject:user[kUserGender] forKey:kUserGender];
+    }
+    
+    if (user[kUserID]) {
+        [collectedUserInfo setObject:user[kUserID] forKey:kUserFacebookID];
+    }
+    
+    if (user[kUserLastName]) {
+        [collectedUserInfo setObject:user[kUserLastName] forKey:kUserLastName];
+    }
+    
+    if (user[kUserLink]) {
+        [collectedUserInfo setObject:user[kUserLink] forKey:kUserLink];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setSecretObject:user[kUserID] forKey:kUserFacebookID];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [SFCoreDataFunctions createOrUpdateUser:collectedUserInfo];
 }
 
 @end

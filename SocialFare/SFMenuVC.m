@@ -8,6 +8,7 @@
 
 #import "SFMenuVC.h"
 #import "SFFriendsVC.h"
+#import "SFCheckinsVC.h"
 
 @interface SFMenuVC ()
 
@@ -17,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [SFFunctions getFriends];
+    [SFFunctions getFriendCheckins];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +31,11 @@
 - (IBAction)viewFriendsTouched:(id)sender {
     SFFriendsVC *friendsVC = [self.storyboard instantiateViewControllerWithIdentifier:kFriendsIdentifier];
     [self.navigationController pushViewController:friendsVC animated:YES];
+}
+
+- (IBAction)viewCheckinsTouched:(id)sender {
+    SFCheckinsVC *checkinsVC = [self.storyboard instantiateViewControllerWithIdentifier:kCheckinsIdentifier];
+    [self.navigationController pushViewController:checkinsVC animated:YES];
 }
 
 @end

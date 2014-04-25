@@ -17,5 +17,10 @@
     #import "SFConstants.h"
     #import "SFFunctions.h"
     #import <SecureNSUserDefaults/NSUserDefaults+SecureAdditions.h>
-    #import "AFNetworkingIncludes.H"
+    #import "AFNetworkingIncludes.h"
+    #import <CoreData/CoreData.h>
+    #define MR_ENABLE_ACTIVE_RECORD_LOGGING 0
+    #import <MagicalRecord/MagicalRecord.h>
+    #import "CoreData+MagicalRecord.h"
+    #import "SFCoreDataFunctions.h"
 #endif

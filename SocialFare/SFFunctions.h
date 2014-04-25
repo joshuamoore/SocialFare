@@ -6,19 +6,21 @@
 //  Copyright (c) 2014 JMO. All rights reserved.
 //
 
+#import "User.h"
+
 #import <UIKit/UIKit.h>
 
 @interface SFFunctions : NSObject {}
 
 + (void)clearUserDefaults;
 
-//+ (User *)retrieveUserData;
-//+ (NSNumber *)userID;
++ (User *)retrieveUserData;
++ (NSString *)userFacebookID;
 //+ (NSString *)userAuthToken;
 //+ (NSString *)userName;
 
 + (void)getFriends;
-+ (NSArray *)userFriends;
++ (void)getFriendCheckins;
 
 + (NSMutableDictionary *)recurseDictionaryForNull:(NSMutableDictionary *)dictionary;
 + (void)alertView:(NSString *)title withMessage:(NSString *)message;

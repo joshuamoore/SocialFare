@@ -21,6 +21,7 @@
     
     [[NSUserDefaults standardUserDefaults] setSecret:kEncryptionKey];
     
+    [self initializeDatabase];
     [self initializeFacebook];
     
     UIStoryboard *storyboard = [self getStoryboard];
@@ -58,6 +59,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
+}
+
+- (void)initializeDatabase {
+    [MagicalRecord setupCoreDataStack];
 }
 
 - (void)initializeFacebook {

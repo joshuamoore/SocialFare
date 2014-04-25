@@ -11,5 +11,6 @@
 @interface SFMenuVC : UIViewController
 
 - (IBAction)viewFriendsTouched:(id)sender;
+- (IBAction)viewCheckinsTouched:(id)sender;
 
 @end
